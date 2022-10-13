@@ -6,6 +6,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname + "/dist"),
     filename: "bundle.js",
+    publicPath: "/static/",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: "babel-loader",
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({

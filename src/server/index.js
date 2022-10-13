@@ -9,6 +9,8 @@ app.get("/", (req, res) => {
   res.send(htmlContent);
 });
 
+app.use("/static", express.static(path.resolve(__dirname, "../../dist")));
+
 app.listen(5000, () => {
   console.log("app is listening to port 5000");
 });
