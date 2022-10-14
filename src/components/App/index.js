@@ -1,7 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import Header from "../Header";
 
-export default function App() {
-  const { value } = useSelector((state) => state);
-  return <div>value: {value}</div>;
-}
+const App = () => {
+  return (
+    <section>
+      <Header></Header>
+      {/* <TextContent /> */}
+      {/* <Cards></Cards> */}
+    </section>
+  );
+};
+
+export default App;
