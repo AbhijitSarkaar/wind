@@ -1,8 +1,9 @@
+require("dotenv").config();
 const path = require("path");
 const fs = require("fs");
 const express = require("express");
 const app = express();
-const { PORT } = process.env;
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   const html = path.resolve(__dirname, "../../dist/index.html");
@@ -13,5 +14,5 @@ app.get("/", (req, res) => {
 app.use("/static", express.static(path.resolve(__dirname, "../../dist")));
 
 app.listen(PORT, () => {
-  console.log("app is listening to port 5000");
+  console.log(`app is listening to port ${PORT}`);
 });
