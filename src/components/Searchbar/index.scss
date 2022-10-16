@@ -1,0 +1,33 @@
+@mixin textStyle($fontSize, $fontWeight, $lineHeight, $color) {
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@media only screen and (min-width: 320px) {
+  .searchbar-container {
+    height: 55px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    font-family: "Mulish", sans-serif;
+
+    > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-content {
+      border-right: 1px solid #f2f2f2;
+      @include textStyle(14px, 400, 18px, #bdbdbd);
+    }
+    .search-icon {
+      color: #eb5757;
+    }
+  }
+}
