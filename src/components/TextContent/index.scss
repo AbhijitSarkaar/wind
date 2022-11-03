@@ -1,0 +1,29 @@
+@media only screen and (min-width: 320px) {
+  .text-content-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat";
+    padding: 12px;
+
+    &-title {
+      margin: 0;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &-stay-count {
+      margin: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .text-content-container {
+    display: none;
+  }
+}
