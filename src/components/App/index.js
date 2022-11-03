@@ -1,6 +1,8 @@
 import React from "react";
+import CardList from "../CardList";
 import Header from "../Header";
 import TextContent from "../TextContent";
+import data from "../../data/stays.json";
 import "./index.scss";
 
 const App = () => {
@@ -8,7 +10,7 @@ const App = () => {
     <section>
       <Header></Header>
       <TextContent />
-      {/* <Cards></Cards> */}
+      <CardList data={data}></CardList>
     </section>
   );
 };
